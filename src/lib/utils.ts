@@ -10,11 +10,6 @@ export function capitalize(value: string) {
 }
 
 export function absoluteUrl(path?: string) {
-  const origin =
-    typeof window !== "undefined" && window.location.origin
-      ? window.location.origin
-      : ""
-
-  if (!path) return origin
-  return `${origin}${path}`
+  if (!path) return `${process.env.NEXT_PUBLIC_APP_URL}`
+  return `${process.env.NEXT_PUBLIC_APP_URL}${path}`
 }
