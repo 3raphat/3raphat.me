@@ -15,23 +15,11 @@ export async function GET(req: Request) {
     const fontRegularData = await fontRegular
     const fontBoldData = await fontBold
 
-    const url = new URL(req.url)
-    const values = Object.fromEntries(url.searchParams)
-
-    const theme = values.theme || "light"
-    const bgColor =
-      theme === "light"
-        ? "linear-gradient(90deg, #f5f5f5 0%, #fafafa 100%)"
-        : "linear-gradient(90deg, #0a0a0a 0%, #171717 100%)"
-    const textColor = theme === "light" ? "#171717" : "#f5f5f5"
-
     return new ImageResponse(
       (
         <div
-          tw="flex h-full w-full items-center justify-center"
+          tw="flex h-full w-full items-center justify-center bg-neutral-50 text-neutral-900"
           style={{
-            background: bgColor,
-            color: textColor,
             fontFamily: "Inter",
           }}
         >
