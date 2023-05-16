@@ -93,7 +93,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
       >
         <Providers>
           <Link href="/">
-            <Icons.logo className="fixed left-4 top-4 w-12 md:left-6 md:top-6 md:w-14" />
+            <Icons.logo className="fixed left-4 top-4 z-50 w-12 md:left-6 md:top-6 md:w-14" />
           </Link>
           <Navbar />
           <div className="flex-1">{children}</div>
