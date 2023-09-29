@@ -43,7 +43,7 @@ const FIXED_PROJECTS: ProjectCardProps[] = [
     title: "Sana",
     description:
       "A Discord music bot with a clean interface, and support for YouTube, SoundCloud, Spotify, etc.",
-    href: "https://sanabot.ml",
+    href: "https://sanabot.live",
     image: "/images/projects/sana.png",
   },
   {
